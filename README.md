@@ -1,19 +1,22 @@
-***PLEASE INSTALL JDK 14+ TO RUN THIS APP***
-
 chương 4 java core 1
 
-jar cvfe BillPayment.jar main.BillPayment main/*.class
+jar cvfe BillPayment.jar BillPayment -C target .
 
 run.sh với command java jar
 
-phải somehow xài scanner, xài file để lưu db
+xài file để lưu db
 
-1 file csv/text cho bill
-1 file csv/text cho payment 
-1 text cho blance
+
+Tat ca dang tu root
 
 javac -d . -cp "lib\*;." test\BillPaymentTest.java - win 
 
-java -jar lib/junit-platform-console-standalone-1.11.4.jar --class-path . --select-class test.BillPaymentTest
+java -jar lib/junit-platform-console-standalone-1.11.4.jar --class-path target --select-class test.BillPaymentTest
 
-javac -d . -cp lib/*.jar  test/BillPaymentTest.java - linux
+javac -d target -cp ".:.:lib/*" test/BillPaymentTest.java - linux
+
+javac -d target BillPayment.java
+
+java -cp target BillPayment CASH_IN 100
+
+java -jar BillPayment.jar CASH_IN 100
