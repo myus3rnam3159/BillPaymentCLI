@@ -35,4 +35,8 @@ public class Account {
     public int getBalance() {
         return this.balance;
     }
+
+    public void setBalance(int bal){
+        this.balance = bal;
+    }
 }

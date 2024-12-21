@@ -1,10 +1,6 @@
-chương 4 java core 1
+java 23.0.1
 
 jar cvfe BillPayment.jar BillPayment -C target .
-
-run.sh với command java jar
-
-xài file để lưu db
 
 
 Tat ca dang tu root

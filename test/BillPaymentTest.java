@@ -13,6 +13,8 @@ public class BillPaymentTest {
     void cashInOk(){
             Account acc = new Account();
 
+            acc.setBalance(0);
+
             acc.addBalance(100);
             assertEquals(100, acc.getBalance());
     }
