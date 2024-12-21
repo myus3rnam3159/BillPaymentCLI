@@ -11,10 +11,10 @@ public class BillPaymentTest {
 
     @Test
     void cashInOk(){
-        Account acc = new Account();
+            Account acc = new Account();
 
-        acc.addBalance(100);
-        assertEquals(100, acc.getBalance());
+            acc.addBalance(100);
+            assertEquals(100, acc.getBalance());
     }
     
 }

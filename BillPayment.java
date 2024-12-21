@@ -25,9 +25,9 @@ public class BillPayment {
     private static String cashIn(String[] args) {
         int newAmount = Integer.parseInt(args[0]);
 
-        Account acc = new Account();
-        acc.addBalance(newAmount);
+            Account acc = new Account();
+            acc.addBalance(newAmount);
 
-        return String.format("Your available balance: %s\n", acc.getBalance());
+            return String.format("Your available balance: %s\n", acc.getBalance());
     }
 }
