@@ -5,9 +5,10 @@
 
 ---
 #### **Run programm using shell with entry points**
+
 ```bash
-$path/to/program chmod +x run.sh
-$path/to/program ./run.sh
+$path/to/program> chmod +x run.sh
+$path/to/program> ./run.sh <COMMAND> <value ...>
 ```
 
 Sample results:
@@ -32,8 +33,8 @@ Good bye!
 ```
 #### **Test using shell**
 ```bash
-$path/to/programchmod +x run.sh
-$path/to/program ./test.sh
+$path/to/program> chmod +x test.sh
+$path/to/program> ./test.sh
 ```
 
 Sample results:
