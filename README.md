@@ -1,32 +1,12 @@
 # Bill Payment Application Guide
 
 ### Prerequisites
-- **Install Java 8+** (current version: `23.0.1`) to run this application.
+**Install Java *8+* (current version: `23.0.1`) to run this application.**
 
 ---
-
-
-#### **Make JAR File**
-```bash
-jar cvfe BillPayment.jar BillPayment -C target .
-```
-
-#### **Compile**
-```bash
-javac -d target BillPayment.java
-```
-
-#### **Command for testing output befor compression**
-```bash
-java -cp target BillPayment <COMMAND> <value...>
-```
-Example
-```bash
-java -cp target BillPayment CASH_IN 100
-```
-
 #### **Run programm using shell with entry points**
 ```bash
+$path/to/program chmod +x run.sh
 $path/to/program ./run.sh
 ```
 
@@ -52,6 +32,7 @@ Good bye!
 ```
 #### **Test using shell**
 ```bash
+$path/to/programchmod +x run.sh
 $path/to/program ./test.sh
 ```
 
