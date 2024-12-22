@@ -49,6 +49,35 @@ public class Bill {
     }
 
     boolean compare(Bill b){
-        return this.no == b.getNo;
+        return this.no == b.getNo() 
+            && this.type.compareTo(b.getType()) == 0
+            && this.amount == b.getAmount()
+            && this.dueDate.compareTo(b.getDueDate()) == 0
+            && this.state.compareTo(b.getState()) == 0
+            && this.provider.compareTo(b.getProvider()) == 0;
+    }
+
+    public int getNo(){
+        return this.no;
+    }
+
+    public String getType(){
+        return this.type;
+    }
+
+    public int getAmount(){
+        return this.amount;
+    }
+
+    public Date getDueDate(){
+        return this.dueDate;
+    }
+
+    public String getState(){
+        return this.state;
+    }
+
+    public String getProvider(){
+        return this.provider;
     }
 }

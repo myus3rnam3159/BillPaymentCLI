@@ -46,8 +46,8 @@ public class Bills {
     public boolean compare(List<Bill> lst){
         boolean check = true;
 
-        for(Bill b: this.bills){
-            
+        for(int i = 0; i < lst.size(); ++i){
+            if(!lst.get(i).compare(this.bills.get(i))) check = false;
         }
 
         return check;
