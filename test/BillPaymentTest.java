@@ -37,5 +37,4 @@ public class BillPaymentTest {
 
         assertEquals(true, bs.compare(bills));
     }
-
 }

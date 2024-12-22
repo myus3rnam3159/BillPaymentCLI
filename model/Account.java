@@ -38,5 +38,13 @@ public class Account {
 
     public void setBalance(int bal){
         this.balance = bal;
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("./db/balance.txt"))){
+            writer.write(String.valueOf(this.balance));
+            writer.close();
+
+        } catch (IOException e) {
+            System.err.println(String.format("Error while updating balance: %s\n", e.getMessage()));
+        }
     }
 }

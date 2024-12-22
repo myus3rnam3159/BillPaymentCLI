@@ -8,6 +8,36 @@ import java.util.List;
 public class Bills {
     private final List<Bill> bills = new ArrayList<>();
 
+    public boolean billExisted(int id){
+        for (Bill b: this.bills){
+            if(b.getNo() == id) return true;
+        }
+        return false;
+    }
+
+    public int getBillAmount(int id){
+        for (Bill b: this.bills){
+            if(b.getNo() == id) return b.getAmount();
+        }
+        return 0;
+    }
+
+    public Bills(){
+        try (BufferedReader br = new BufferedReader(new FileReader("db/bill.csv"))) {
+            br.readLine();
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                
+                String[] columns = line.split(",");
+                this.bills.add(new Bill(columns));
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void list(){
 
         try (BufferedReader br = new BufferedReader(new FileReader("db/bill.csv"))) {

@@ -22,6 +22,8 @@ public class BillPayment {
     static {
         map.put("CASH_IN", BillPayment::cashIn);
         map.put("LIST_BILL", BillPayment::listBill);
+        map.put("PAY", BillPayment::pay);
+        map.put("EXIT", BillPayment::exit);
     }
 
     private static void cashIn(String[] args) {
@@ -36,5 +38,34 @@ public class BillPayment {
     private static void listBill(String[] args) {
         Bills bills = new Bills();
         bills.list();
+    }
+
+    private static void pay(String[] args) {
+        Bills bills = new Bills();
+
+        int am = 0;
+        for(String billId: args){
+            int id = Integer.parseInt(billId);
+
+            if(!bills.billExisted(id)){
+                System.out.println("Sorry! Not found a bill with such id");
+                return;
+            }
+            am += bills.getBillAmount(id);
+        }
+
+        Account acc = new Account();
+        int balance = acc.getBalance();
+
+        if(balance < am){
+            System.out.println("Sorry! Not enough fund to proceed with payment");
+            return;
+        }
+        acc.setBalance(balance - am);
+        System.out.println(String.format("Your current balance: %s", acc.getBalance()));
+    }
+
+    private static void exit(String[] args){
+        System.out.println("Good bye!");
     }
 }
