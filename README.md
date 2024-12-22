@@ -3,6 +3,17 @@
 ### Prerequisites
 **Install Java *8+* (current version: `23.0.1`) to run this application.**
 
+**Junit testing libary version (for avoiding conflict)**
+```bash
+unit-jupiter-5.11.3.jar
+junit-jupiter-api-5.11.4.jar
+unit-platform-commons-1.11.4.jar
+junit-platform-console-standalone-1.11.4.jar
+junit-platform-engine-1.11.4.jar
+junit-platform-launcher-1.11.4.jar
+junit-platform-suite-commons-1.11.4.jar
+pentest4j-1.3.0.jar
+```
 ---
 #### **Run programm using shell with entry points**
 
